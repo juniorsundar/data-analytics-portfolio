@@ -3,8 +3,6 @@ title: "Case Study: Cyclistic"
 author: "Junior Sundar"
 date: 22-August-2023
 format: html
-editor: 
-  - render-on-save: true
 ---
 
 ```{r load libraries, include=FALSE}
@@ -61,7 +59,7 @@ The raw data is downloaded and made available in `.csv` format in the folder `./
 
 ## Data Structure
 
-The data is organised in rows and colums.
+The data is organised in rows and columns. Each row represents a single trip and it is identified by a unique `ride_id`. The remaining fields are as defined in the table below:
 
 ```{r sample data, warning=FALSE, echo=FALSE}
 sample_data <- read.csv('./dataset_12_months/202208-divvy-tripdata.csv')
@@ -87,3 +85,18 @@ formattable(summary_frame,
             align = c("l", "l"))
 
 ```
+
+## Data "Goodness"
+
+### Reliable and Original
+
+The data is publicly available and contains accurate, complete and unbiased information on Cyclistic's historical bike trips. Since it is internal data that is meant to be used to augment business functions we can assume that it is trustworthy.
+
+### Comprehensive and Current
+
+The source contain a spread of data points that can be useful to derive meaningful conclusions. It contains the most recent 12 months data so it should be current as well.
+
+### Cited
+
+Publicly available means that the data is open to scrutiny, which also means that it is freely accessible.
+
